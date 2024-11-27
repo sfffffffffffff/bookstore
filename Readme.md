@@ -1,4 +1,5 @@
 # 在线书店系统设计文档
+本项目为复旦大学2024年秋季数据库pj设计，请同学万万不要于该学期使用该pj，该项目置于此以便于向助教展示成果
 本系统是一个在线书店电子商务平台，旨在为用户提供图书在线购买服务。系统支持多角色用户管理、商品管理、购物车、订单处理等功能，实现图书销售的完整业务流程。
 ![alt text](readmepicture/ER图.png)
 ## 属性表
@@ -131,10 +132,25 @@
 
 - 不同角色有不同的界面显示，用户有我的订单与购物车界面，默认界面为书籍商城，如果购物车为空，点击去逛逛来到商城，点击不同分类，可以分类显示，搜索栏用@可以实现精确搜索。点击加入购物车，如果库存大于0，会将商品加入到购物车中，点击购物车，结算，会生成订单，点击我的订单可以查询订单，可以取消未发货的订单。
 
+![image](https://github.com/user-attachments/assets/b43f1ccf-7633-4743-bde2-efb911929d11)
+![image](https://github.com/user-attachments/assets/2d7eef1e-0e4e-46f9-b052-c3bedc4197e9)
+![image](https://github.com/user-attachments/assets/e2f06409-e264-416c-b2ce-c9dbf128cc91)
+![image](https://github.com/user-attachments/assets/7ce2b647-57d4-4fe7-94e1-79317b6413d6)
+![image](https://github.com/user-attachments/assets/301fb684-96b9-4fa8-9247-396efa91c664)
+
 
 - 店家有店家面板，此时默认登录后界面依旧为商城，但是此时，用户无权限加入购物车。店家面板中有订单管理与商品管理，订单管理可以修改订单状态，书籍管理可以新增书籍信息，可以更新书籍信息，可以查看目前库存预警。
+![image](https://github.com/user-attachments/assets/6932fd3b-42d6-4d3c-88b0-ba288d9385de)
+![image](https://github.com/user-attachments/assets/a18ad736-b29c-4f6e-b2b1-b5f780c50c79)
+![image](https://github.com/user-attachments/assets/53cb97b8-ce7d-4bb5-bfa1-4edf4f79a01a)
+![image](https://github.com/user-attachments/assets/f6b05d7b-2b9d-4764-ab38-6e0b10d63d12)
+![image](https://github.com/user-attachments/assets/e957be68-c2be-4a3e-849e-cbaacacb9c7a)
+![image](https://github.com/user-attachments/assets/f9eb108d-726a-4bcf-9e6d-2844456734be)
 
 - 管理员有管理员面板，此时默认登录后界面依旧为商城，但是此时，用户无权限加入购物车。管理员面板有用户管理，订单管理，商品管理，管理员可以新增用户，修改用户昵称，地址，密码，权限。订单管理管理员可以查看订单详情，删除订单，商品管理，管理员可以修改书籍信息。
+  ![image](https://github.com/user-attachments/assets/210970ca-79ff-4ae8-88a5-3977e5bce2f9)
+![image](https://github.com/user-attachments/assets/fcf45827-d7c7-4e4b-b528-653ed0fe6b36)
+![image](https://github.com/user-attachments/assets/7fdb0458-daf6-404d-ae6b-53b5883cc173)
 
 
 
@@ -440,6 +456,7 @@ DATABASE_URL = "postgresql://postgres:15466515aA@localhost/bookstore"
 3. 图片上传需要配置存储路径
 因书籍图片不是很重要，数据库中只存储了书籍图片url,书籍存储在uploads\books中
 4. 建议在生产环境中修改密钥
+
 
 
 
